@@ -50,6 +50,7 @@
         <img id="stay" src="static/media/stay360.jpg">
         <img id="leisure" src="static/media/leisure360.jpg">
         <img id="events" src="static/media/events360.jpg">
+        <img id="logo" src="static/media/logo.png">
         
 
 
@@ -89,7 +90,9 @@
      <a-entity id="middle" position="0 0 0" ></a-entity>
      <a-entity id="home-scene" visible="true" class="scene">
 
-         <a-sky rotation="0 90 0" id="home-360" radius="10" src="#home"></a-sky>
+         <a-sky rotation="0 -90 0" id="home-360" radius="10" src="#home"></a-sky>
+
+         <a-image src="#logo" position="-0.2 1.5 -2.5" rotation="0 0 0" height="0.254" width="1.472"  visible="true" ></a-image>
 
           <a-entity id="main-control" layout="type: circle; radius: 5" position="0 -0.3 0.9" rotation="0 0 0" >
 
@@ -103,25 +106,27 @@
               <a-entity visible="false" ></a-entity>
               <a-entity visible="false" ></a-entity>
               <a-entity visible="false" ></a-entity>
-
               <a-entity visible="false" ></a-entity>
               <a-entity visible="false" ></a-entity>
 
-              <a-entity template="src: #link"  data-thumb="#arrival-thumb" route="href: airport.html" data-opacity="0.8"  set-image="on: mouseenter; back:mouseleave; target: #home-360; src: #airport; original: #home" >
+              <a-entity visible="false" ></a-entity>
+
+              <a-entity template="src: #link"  data-thumb="#arrival-thumb" route="href: airport.html" data-opacity="0.7"  set-image="on: mouseenter; back:mouseleave; target: #home-360; src: #airport; original: #home" >
               </a-entity>
 
               <a-entity template="src: #link"  
-                        set-image="on: mouseenter; back:mouseleave; target: #home-360; src: #stay; original: #home" route="href: stay.html" data-thumb="#stay-thumb" data-opacity="0.6">
+                        set-image="on: mouseenter; back:mouseleave; target: #home-360; src: #stay; original: #home" route="href: stay.html" data-thumb="#stay-thumb" data-opacity="0.7">
               </a-entity>
 
-              <a-entity template="src: #link"  data-thumb="#events-thumb" data-opacity="0.6"
+              <a-entity template="src: #link"  data-thumb="#events-thumb" data-opacity="0.7"
                 set-image="on: mouseenter; back:mouseleave; target: #home-360; src: #events; original: #home"  route="href: events.html">
               </a-entity>
 
-              <a-entity template="src: #link"   data-thumb="#leisure-thumb" data-opacity="0.6"
+              <a-entity template="src: #link"   data-thumb="#leisure-thumb" data-opacity="0.7"
                 set-image="on: mouseenter; back:mouseleave; target: #home-360; src: #leisure; original: #home"  route="href: leisure.html">
               </a-entity>
 
+              <a-entity visible="false" ></a-entity>
               <a-entity visible="false" ></a-entity>
 
 
@@ -136,7 +141,7 @@
 
    <div id="back-home"> 
       <a id="home-button" href="index.html">
-          <img src="static/media/back-thumb.PNG" width="90" height="50" alt="submit" />
+          <img src="static/media/homebutton.PNG" width="50" height="50" alt="submit" />
       </a>
    </div>
     
