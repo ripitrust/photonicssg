@@ -96,18 +96,22 @@
             set-image="on: mouseenter; back:mouseleave; target: #hotel-sky; src: #deluxe360; original: #room" 
              ></a-entity>
 
-            <a-entity  position="0 -0.5 -4" template="src: #link" data-opacity="0.8" data-src="#suite360" 
+
+            <a-entity  position="0 -0.5 -4" template="src: #link" data-opacity="0.8" data-src="#premium360" 
+            set-image="on: mouseenter; back:mouseleave; target: #hotel-sky; src: #premium360; original: #room"
+            data-thumb="#premium-thumb" route="href: premium.html" ></a-entity>
+
+
+            <a-entity  position="1 -0.5 -4" template="src: #link" data-opacity="0.8" data-src="#suite360" 
             set-image="on: mouseenter; back:mouseleave; target: #hotel-sky; src: #suite360; original: #room"
             data-thumb="#suite-thumb" route="href: suite.html" ></a-entity>
 
 
-            <a-entity  position="1 -0.5 -4" template="src: #link" data-opacity="0.8" data-src="#club360" 
+            <a-entity  position="2 -0.5 -4" template="src: #link" data-opacity="0.8" data-src="#club360" 
             set-image="on: mouseenter; back:mouseleave; target: #hotel-sky; src: #club360; original: #room"
             data-thumb="#club-thumb" route="href: club.html" ></a-entity>
 
-            <a-entity  position="2 -0.5 -4" template="src: #link" data-opacity="0.8" data-src="#premium360" 
-            set-image="on: mouseenter; back:mouseleave; target: #hotel-sky; src: #premium360; original: #room"
-            data-thumb="#premium-thumb" route="href: premium.html" ></a-entity>
+         
 
       </a-entity>
 

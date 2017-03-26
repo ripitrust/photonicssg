@@ -20,36 +20,32 @@
     <script src="static/js/route.js"></script>
     <script src="static/js/link.js"></script>
     <script src="static/js/refresh.js"></script>
-    <script src="static/js/back.js"></script>
-
+     <script src="static/js/back.js"></script>
 </head>
   </head>
 </head>
 
 <body id="main">
-<div id="loader" style="text-align: center; padding-top:20%">
+<div id="loader" style="text-align: center; padding-top:20%;">
 
-    <img style="height: 40px; width: 40px;" src="/static/media/loader.gif"  id="loader"/>
+     <img style="height: 40px; width: 40px" src="/static/media/loader.gif"  id="loader"/>
 
-    <h2> photonics singapore 2017  </h2>
+     <h2> Photonics Singapore 2017  </h2>
+
 </div>
 
   <a-scene loader id="ancestor">
       <a-assets>
         <!-- Image links. -->
-        <img id="hotel-thumb" src="static/media/hotel-thumb.png">
-        <img id="pool-thumb" src="static/media/pool-thumb.png">
         <img id="back-thumb" src="static/media/back-thumb.png">
-        <img id="home" src="static/media/gbb360.jpg">
-        <img id="stay" src="static/media/stay360.jpg">
-        <img id="room" src="static/media/room360.jpg">
+        <img id="direct-thumb" src="static/media/direct-thumb.png">
+        <img id="direct2-thumb" src="static/media/direct2-thumb.png">
+        <img id="direct3-thumb" src="static/media/direct3-thumb.png">
+        <img id="direct4-thumb" src="static/media/direct4-thumb.png">
 
-        <img id="club55" src="static/media/club360-1.jpg">
-
-        <img id="pool-front" src="static/media/pool-front.jpg">
-        <img id="pool-back" src="static/media/pool-back.jpg">
-        <img id="pool-corri" src="static/media/pool-corri.jpg">
-        <img id="pool-panel" src="static/media/pool-panel.jpg">
+        <img id="club55-front" src="static/media/club360-1.jpg">
+        <img id="club55-middle" src="static/media/club360-2.jpg">
+        <img id="club55-back" src="static/media/club360-3.jpg">
 
         <audio id="click-sound" crossorigin="anonymous" src="static/media/click.wav"></audio>
         <!-- <video id="event-video" src="static/media/event2.mp4"></video> -->
@@ -82,27 +78,39 @@
           </a-cursor>
       </a-entity>
 
-    <a-entity id="stay-scene" visible="true" class="scene">
+       <a-entity visible="true" id="club55-front-scene">
 
-        <a-sky rotation="0 90 0" id="stay-360" radius="10" src="#stay"></a-sky>
+            <a-sky rotation="0 90 0" id="image-360" radius="10" src="#club55-front"></a-sky>
 
-         <a-entity position="0 -1.5 -4" template="src: #link" data-opacity="0.8" data-thumb="#back-thumb" back ></a-entity>
+              <a-entity position="0 -1.5 -4" template="src: #link" data-opacity="0.8" data-thumb="#back-thumb" back ></a-entity>
 
-        <a-entity  position="-1 -0.5 -4" template="src: #link" data-opacity="0.8" set-image="on: mouseenter; back: mouseleave; target: #stay-360; src: #room ; original: #stay" data-thumb="#hotel-thumb" route="href: hotel.html"></a-entity>
+             <a-entity position="0 -2 4" rotation="90 0 0" template="src: #link" data-opacity="0.9"   data-thumb="#direct2-thumb" link="from: #club55-front-scene; to: #club55-middle-scene" ></a-entity>
+          
+       </a-entity>
 
-        <a-entity  position="0 -0.5 -4"
-          set-image="on: mouseenter; back:mouseleave; target: #stay-360; src: #pool-corri; original: #stay" 
-          route="pool.html" template="src: #link" data-opacity="0.8" data-thumb="#pool-thumb"></a-entity>
+       <a-entity visible="false" id="club55-middle-scene" >
 
-            <a-entity  position="1 -0.5 -4"
-          set-image="on: mouseenter; back:mouseleave; target: #stay-360; src: #club55; original: #stay" 
-          route="club55.html" template="src: #link" data-opacity="0.8" data-thumb="#club55-thumb"></a-entity>
+           <a-sky rotation="0 90 0" id="image-360" radius="10" src="#club55-middle"></a-sky>
 
-    </a-entity>
+           <a-entity position="-3 -3 0" rotation="90 180 0" template="src: #link" data-opacity="0.9"  data-thumb="#direct-thumb" link="from: #club55-middle-scene; to: #club55-back-scene"></a-entity>
+
+           <a-entity position="3 -3 0" rotation="90 180 0" template="src: #link" data-opacity="0.9"  data-thumb="#direct2-thumb" link="from: #club55-middle-scene; to: #club55-front-scene"></a-entity>
+
+       </a-entity>
+
+
+       <a-entity visible="false" id="club55-back-scene" >
+
+           <a-sky rotation="0 90 0" id="image-360" radius="10" src="#club55-back"></a-sky>
+
+           <a-entity position="3 -3 0" rotation="90 180 0" template="src: #link" data-opacity="0.9"  data-thumb="#direct2-thumb" link="from: #club55-back-scene; to: #club55-middle-scene"></a-entity>
+
+       </a-entity>
+
 
    </a-scene>
 
-     <div id="back-home"> 
+  <div id="back-home"> 
       <a id="home-button" href="index.html">
           <img src="static/media/homebutton.PNG" width="50" height="50" alt="submit" />
       </a>
