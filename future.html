@@ -15,6 +15,8 @@
     <script src="https://npmcdn.com/aframe-template-component@3.1.1"></script>
     <script src="https://rawgit.com/oscarmarinmiro/aframe-video-controls/master/dist/aframe-video-controls.min.js"></script>
     <script src="static/js/loader.js"></script>
+    <script src="static/js/back.js"></script>
+
 </head>
   </head>
 </head>
@@ -22,9 +24,10 @@
 <body id="main">
 <div id="loader" style="text-align: center; padding-top:20%;">
 
-    <img style="height: 30px; width: 30px" src="/static/media/loader.gif"  id="loader"/>
+  <img style="height: 40px; width: 40px" src="/static/media/loader.gif"  id="loader"/>
 
-    <h4>  Loading Awesomeness </h4>
+  <h2> Photonics Singapore 2017  </h2>
+
 </div>
 
   <a-scene loader id="ancestor">
@@ -62,6 +65,8 @@
           </a-cursor>
       </a-entity>
       <a-videosphere src="#future360" rotation="0 180 0"></a-videosphere>
+
+      <a-entity position="0 -1.5 -4" template="src: #link" data-opacity="0.8" data-thumb="#back-thumb" back ></a-entity>
 
       <a-entity video-controls="src: #future360"></a-entity>
 

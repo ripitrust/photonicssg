@@ -20,16 +20,18 @@
     <script src="static/js/route.js"></script>
     <script src="static/js/link.js"></script>
     <script src="static/js/refresh.js"></script>
+    <script src="static/js/back.js"></script>
+
 </head>
   </head>
 </head>
 
 <body id="main">
-<div id="loader" style="text-align: center; padding-top:20%;">
+<div id="loader" style="text-align: center; padding-top:20%">
 
-    <img style="height: 30px; width: 30px" src="/static/media/loader.gif"  id="loader"/>
+    <img style="height: 40px; width: 40px;" src="/static/media/loader.gif"  id="loader"/>
 
-    <h4>  Loading Awesomeness </h4>
+    <h2> photonics singapore 2017  </h2>
 </div>
 
   <a-scene loader id="ancestor">
@@ -37,6 +39,7 @@
         <!-- Image links. -->
         <img id="hotel-thumb" src="static/media/hotel-thumb.png">
         <img id="pool-thumb" src="static/media/pool-thumb.png">
+        <img id="back-thumb" src="static/media/back-thumb.png">
         <img id="home" src="static/media/gbb360.jpg">
         <img id="stay" src="static/media/stay360.jpg">
         <img id="room" src="static/media/room360.jpg">
@@ -80,6 +83,8 @@
     <a-entity id="stay-scene" visible="true" class="scene">
 
         <a-sky rotation="0 90 0" id="stay-360" radius="10" src="#stay"></a-sky>
+
+         <a-entity position="0 -0.5 -4" template="src: #link" data-opacity="0.8" data-thumb="#back-thumb" back ></a-entity>
 
         <a-entity  position="-1 -0.5 -4" template="src: #link" data-opacity="0.8" set-image="on: mouseenter; back: mouseleave; target: #stay-360; src: #room ; original: #stay" data-thumb="#hotel-thumb" route="href: hotel.html"></a-entity>
 

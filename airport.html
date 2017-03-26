@@ -17,6 +17,7 @@
     <script src="static/js/loader.js"></script>
     <script src="static/js/link.js"></script>
     <script src="static/js/refresh.js"></script>
+    <script src="static/js/back.js"></script>
 </head>
   </head>
 </head>
@@ -24,9 +25,10 @@
 <body id="main">
 <div id="loader" style="text-align: center; padding-top:20%;">
 
-    <img style="height: 30px; width: 30px" src="/static/media/loader.gif"  id="loader"/>
+   <img style="height: 40px; width: 40px" src="/static/media/loader.gif"  id="loader"/>
 
-    <h4>  Loading Awesomeness </h4>
+     <h2> Photonics Singapore 2017  </h2>
+
 </div>
 
   <a-scene loader id="ancestor">
@@ -81,6 +83,8 @@
     <a-entity id="airport-scene" visible="true" class="scene">
 
         <a-sky rotation="0 90 0" id="airport-sky" radius="10" src="#airport"></a-sky>
+
+         <a-entity position="0 -1.5 -4" template="src: #link" data-opacity="0.8" data-thumb="#back-thumb" back ></a-entity>
 
         <a-entity  position="2 -3 -5" rotation="90 0 0" template="src: #link" data-opacity="0.8"  data-thumb="#direct3-thumb" link="from: #airport-scene; to: #airport-left-scene"></a-entity>
 

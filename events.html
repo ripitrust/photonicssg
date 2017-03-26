@@ -20,6 +20,7 @@
     <script src="static/js/route.js"></script>
     <script src="static/js/link.js"></script>
     <script src="static/js/refresh.js"></script>
+    <script src="static/js/back.js"></script>
 </head>
   </head>
 </head>
@@ -29,7 +30,8 @@
 
     <img style="height: 30px; width: 30px" src="/static/media/loader.gif"  id="loader"/>
 
-    <h4>  Loading Awesomeness </h4>
+    <h2> Photonics Singapore 2017  </h2>
+
 </div>
 
   <a-scene loader id="ancestor">
@@ -78,7 +80,7 @@
     <a-entity id="events-scene" visible="true" class="scene">
 
         <a-sky rotation="0 90 0" id="events-sky" radius="10" src="#events360"></a-sky>
--
+
         <a-entity  position="-1 -0.5 -4" template="src: #link" data-opacity="0.8" set-image="on: mouseenter; back: mouseleave; target: #events-sky; src: #ballroom360 ; original: #events360" data-thumb="#ballroom-thumb" route="href: ballroom.html"></a-entity>
 
         <a-entity  position="0 -0.5 -4" template="src: #link" data-opacity="0.8" set-image="on: mouseenter; back: mouseleave; target: #events-sky; src: #gbb360 ; original: #events360" data-thumb="#flower-thumb" route="href: gbb.html"></a-entity>

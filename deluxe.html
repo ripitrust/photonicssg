@@ -20,6 +20,7 @@
     <script src="static/js/route.js"></script>
     <script src="static/js/link.js"></script>
     <script src="static/js/refresh.js"></script>
+    <script src="static/js/back.js"></script>
 </head>
   </head>
 </head>
@@ -27,15 +28,17 @@
 <body id="main">
 <div id="loader" style="text-align: center; padding-top:20%;">
 
-    <img style="height: 30px; width: 30px" src="/static/media/loader.gif"  id="loader"/>
+    <img style="height: 40px; width: 40px" src="/static/media/loader.gif"  id="loader"/>
+   
+    <h2> Photonics Singapore 2017  </h2>
 
-    <h4>  Loading Awesomeness </h4>
 </div>
 
   <a-scene loader id="ancestor">
       <a-assets>
         <!-- Image links. -->
         <img id="direct-thumb" src="static/media/direct-thumb.png">
+        <img id="back-thumb" src="static/media/back-thumb.png">
         <img id="direct2-thumb" src="static/media/direct2-thumb.png">
         <img id="direct3-thumb" src="static/media/direct3-thumb.png">
         <img id="direct4-thumb" src="static/media/direct4-thumb.png">
@@ -79,6 +82,8 @@
       <a-entity visible="true" id="deluxe-scene" >
 
           <a-sky rotation="0 90 -15" id="image-360" radius="10" src="#deluxe360"></a-sky>
+          
+          <a-entity position="0 -1.5 -4" template="src: #link" data-opacity="0.8" data-thumb="#back-thumb" back ></a-entity>      
 
           <a-entity position="-2 -2 0" rotation="90 0 0" template="src: #link" data-opacity="0.9" data-src="#deluxe360-balcony"  data-thumb="#direct2-thumb" link="from :#deluxe-scene; to: #deluxe-toilet-scene" ></a-entity>
 
