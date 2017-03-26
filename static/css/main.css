@@ -1,0 +1,17 @@
+#back-home {
+
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+}
+
+
+#home-button {
+
+    position: absolute;
+    border:0;
+    background: transparent;
+    bottom: 0px;
+    left: 0px;
+
+}

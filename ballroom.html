@@ -16,6 +16,7 @@
     <script src="static/js/loader.js"></script>
     <script src="static/js/link.js"></script>
     <script src="static/js/refresh.js"></script>
+    <script src="static/js/back.js"></script>
 </head>
   </head>
 </head>
@@ -88,6 +89,8 @@
     <a-entity id="ballroom-scene" visible="true" class="scene">
 
         <a-sky rotation="0 90 0" id="ballroom-sky" radius="10" src="#ballroom360"></a-sky>
+
+         <a-entity position="0 -0.5 -4" template="src: #link" data-opacity="0.6" data-thumb="#back-thumb" back ></a-entity>
 
         <a-entity  position="2 -3 -5" rotation="90 0 0" template="src: #link" data-opacity="0.8"  data-thumb="#direct3-thumb" link="from: #ballroom-scene; to: #ballroom-front-scene"></a-entity>
 
