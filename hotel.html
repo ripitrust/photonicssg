@@ -26,11 +26,9 @@
 </head>
 
 <body id="main">
-<div id="loader" style="text-align: center; padding-top:20%;">
+<div id="loader" style="text-align: center; width: 100%; height: 100%; background-color: black">
 
-    <img style="height: 40px; width: 40px" src="/static/media/loader.gif"  id="loader"/>
-
-     <h2> Photonics Singapore 2017  </h2>
+   <img style="height: 50px; width: 50px; padding-top: 30%" src="/static/media/loader.gif"  id="loader"/>
 
 </div>
 
@@ -45,10 +43,6 @@
 
 
         <img id="back-thumb" src="static/media/back-thumb.png">
-        <img id="direct-thumb" src="static/media/direct-thumb.png">
-        <img id="direct2-thumb" src="static/media/direct2-thumb.png">
-        <img id="direct3-thumb" src="static/media/direct3-thumb.png">
-        <img id="direct4-thumb" src="static/media/direct4-thumb.png">
 
         <img id="room" src="static/media/room360.jpg">
         <img id="deluxe360" src="static/media/deluxe360.jpg">
@@ -61,7 +55,7 @@
 
         <script id="link" type="text/html">
           <a-entity class="active"
-            geometry="primitive: circle; radius: 0.4;"
+            geometry="primitive: circle; radius: 0.45;"
             material="shader: standard; src: ${thumb}; opacity: ${opacity}; side:double;"
             event-set__1="_event: mousedown; scale: 1 1 1"
             event-set__2="_event: mouseup; scale: 1.2 1.2 1"
@@ -90,26 +84,26 @@
 
             <a-sky rotation="0 90 -15" id="hotel-sky" radius="10" src="#room"></a-sky>
 
-              <a-entity position="0 -1.5 -4" template="src: #link" data-opacity="0.8" data-thumb="#back-thumb" back ></a-entity>
+              <a-entity position="0 -2.45 -3.3" template="src: #link" data-opacity="0.9" data-thumb="#back-thumb" back ></a-entity>
 
-            <a-entity position="-1 -0.5 -4" template="src: #link" data-opacity="0.8" data-src="#deluxe360" data-thumb="#deluxe-thumb" route="href: deluxe.html"
+            <a-entity position="-1.8 -0.4 -5" template="src: #link" data-opacity="0.9" data-src="#deluxe360" data-thumb="#deluxe-thumb" route="href: deluxe.html"
             set-image="on: mouseenter; back:mouseleave; target: #hotel-sky; src: #deluxe360; original: #room" 
              ></a-entity>
 
 
-            <a-entity  position="0 -0.5 -4" template="src: #link" data-opacity="0.8" data-src="#premium360" 
+            <a-entity  position="-0.6 -0.4 -5" template="src: #link" data-opacity="0.9" data-src="#premium360" 
             set-image="on: mouseenter; back:mouseleave; target: #hotel-sky; src: #premium360; original: #room"
             data-thumb="#premium-thumb" route="href: premium.html" ></a-entity>
 
 
-            <a-entity  position="1 -0.5 -4" template="src: #link" data-opacity="0.8" data-src="#suite360" 
-            set-image="on: mouseenter; back:mouseleave; target: #hotel-sky; src: #suite360; original: #room"
-            data-thumb="#suite-thumb" route="href: suite.html" ></a-entity>
-
-
-            <a-entity  position="2 -0.5 -4" template="src: #link" data-opacity="0.8" data-src="#club360" 
+            <a-entity  position="0.6 -0.4 -5" template="src: #link" data-opacity="0.9" data-src="#club360" 
             set-image="on: mouseenter; back:mouseleave; target: #hotel-sky; src: #club360; original: #room"
             data-thumb="#club-thumb" route="href: club.html" ></a-entity>
+
+
+            <a-entity  position="1.8 -0.4 -5" template="src: #link" data-opacity="0.9" data-src="#suite360" 
+            set-image="on: mouseenter; back:mouseleave; target: #hotel-sky; src: #suite360; original: #room"
+            data-thumb="#suite-thumb" route="href: suite.html" ></a-entity>
 
          
 

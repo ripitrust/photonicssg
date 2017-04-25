@@ -26,11 +26,9 @@
 </head>
 
 <body id="main">
-<div id="loader" style="text-align: center; padding-top:20%;">
+<div id="loader" style="text-align: center; width: 100%; height: 100%; background-color: black">
 
-    <img style="height: 40px; width: 40px" src="/static/media/loader.gif"  id="loader"/>
-
-   <h2> Photonics Singapore 2017  </h2>
+   <img style="height: 50px; width: 50px; padding-top: 30%" src="/static/media/loader.gif"  id="loader"/>
 
 </div>
 
@@ -40,9 +38,6 @@
 
         <img id="back-thumb" src="static/media/back-thumb.png">
         <img id="direct-thumb" src="static/media/direct-thumb.png">
-        <img id="direct2-thumb" src="static/media/direct2-thumb.png">
-        <img id="direct3-thumb" src="static/media/direct3-thumb.png">
-        <img id="direct4-thumb" src="static/media/direct4-thumb.png">
         <img id="suite360" src="static/media/suite360.jpg">
         <img id="suite360-right" src="static/media/suite360-right.jpg">
         <img id="suite360-left" src="static/media/suite360-left.jpg">
@@ -85,13 +80,13 @@
        <!-- SUITE ROOM  -->
       <a-entity visible="true" id="suite-scene" >
 
-      <a-sky rotation="0 90 -15" id="image-360" radius="10" src="#suite360"></a-sky>
+      <a-sky rotation="-2 90 3" id="image-360" radius="10" src="#suite360"></a-sky>
       
-       <a-entity position="0 -1.5 -4" template="src: #link" data-opacity="0.8" data-thumb="#back-thumb" back></a-entity>  
+       <a-entity position="0 -2.35 -3.3" template="src: #link" data-opacity="0.8" data-thumb="#back-thumb" back></a-entity>  
 
-         <a-entity position="3 -2 -1.5" template="src: #link" data-opacity="0.9" data-src="#suite360-right"  data-thumb="#direct-thumb" link="from: #suite-scene; to: #suite-right-scene" ></a-entity>
+         <a-entity position="1.41 -0.88 0.25" rotation= "-10 -5 0" template="src: #link" data-opacity="0.9" data-src="#suite360-right"  data-thumb="#direct-thumb" link="from: #suite-scene; to: #suite-right-scene" ></a-entity>
 
-         <a-entity position="-3 -2 -1.5" template="src: #link" data-opacity="0.9" data-src="#suite360-left"  data-thumb="#direct2-thumb" link="from: #suite-scene; to: #suite-left-scene"  ></a-entity>
+         <a-entity position="0 0 0" template="src: #link" data-opacity="0.9" data-src="#suite360-left"  data-thumb="#direct-thumb" link="from: #suite-scene; to: #suite-left-scene"  ></a-entity>
 
          <a-entity position="4 -0.6 -4" template="src: #link" data-opacity="0.9" data-src="#suite360-room"  data-thumb="#direct4-thumb" link="from: #suite-scene; to: #suite-room-scene"></a-entity>
           
