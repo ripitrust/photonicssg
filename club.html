@@ -27,11 +27,10 @@
 </head>
 
 <body id="main">
-<div id="loader" style="text-align: center; padding-top:20%;">
+<div id="loader" style="text-align: center; width: 100%; height: 100%; background-color: black">
 
-    <img style="height: 40px; width: 40px" src="/static/media/loader.gif"  id="loader"/>
+   <img style="height: 50px; width: 50px; padding-top: 30%" src="/static/media/loader.gif"  id="loader"/>
 
-   <h2> Photonics Singapore 2017  </h2>
 </div>
 
   <a-scene loader id="ancestor">
@@ -39,9 +38,6 @@
         <!-- Image links. -->
         <img id="back-thumb" src="static/media/back-thumb.png">
         <img id="direct-thumb" src="static/media/direct-thumb.png">
-        <img id="direct2-thumb" src="static/media/direct2-thumb.png">
-        <img id="direct3-thumb" src="static/media/direct3-thumb.png">
-        <img id="direct4-thumb" src="static/media/direct4-thumb.png">
 
         <img id="club360" src="static/media/club360.jpg">
         <img id="club360-toilet" src="static/media/club360-toilet.jpg">
@@ -85,38 +81,38 @@
 
        <a-entity visible="true" id="club-scene">
 
-            <a-sky rotation="0 90 -15" id="image-360" radius="10" src="#club360"></a-sky>
+            <a-sky rotation="-2 90 0" id="image-360" radius="10" src="#club360"></a-sky>
 
-            <a-entity position="0 -1.5 -4" template="src: #link" data-opacity="0.8" data-thumb="#back-thumb" back></a-entity>  
+            <a-entity position="0 -2.35 -3.3" template="src: #link" data-opacity="0.8" data-thumb="#back-thumb" back></a-entity>  
 
-             <a-entity position="2 -2 0" rotation="90 0 0" template="src: #link" data-opacity="0.9" data-src="#club-balcony"  data-thumb="#direct-thumb" link="from: #club-scene; to: #club-balcony-scene" ></a-entity>
+             <a-entity position="3.66 -2.14 -0.99" rotation="90 0 0" template="src: #link" data-opacity="0.9" data-src="#club-balcony"  data-thumb="#direct-thumb" link="from: #club-scene; to: #club-balcony-scene" ></a-entity>
 
-             <a-entity position="-3 -2 1.5" rotation="90 0 0" template="src: #link" data-opacity="0.9" data-src="#club-toilet"  data-thumb="#direct2-thumb" link="from: #club-scene; to: #club-door-scene" ></a-entity>
+             <a-entity position="-3.61 -3 1.11" rotation="90 0 180" template="src: #link" data-opacity="0.9" data-src="#club-toilet"  data-thumb="#direct-thumb" link="from: #club-scene; to: #club-door-scene" ></a-entity>
           
        </a-entity>
        
        <a-entity visible="false" id="club-balcony-scene" >
 
-           <a-sky rotation="0 90 -15" id="image-360" radius="10" src="#club360-balcony"></a-sky>
+           <a-sky rotation="0 112 0" id="image-360" radius="10" src="#club360-balcony"></a-sky>
 
-           <a-entity position="-1 -2.5 -2.5" rotation="90 180 0" template="src: #link" data-opacity="0.9" data-src="#premium360"  data-thumb="#direct4-thumb" link="from: #club-balcony-scene; to: #club-scene"></a-entity>
+           <a-entity position="-2.49 -2.21 0.81" rotation="85 180 -25" template="src: #link" data-opacity="0.9" data-src="#premium360"  data-thumb="#direct-thumb" link="from: #club-balcony-scene; to: #club-scene"></a-entity>
 
        </a-entity>
 
        
        <a-entity visible="false" id="club-toilet-scene">
 
-           <a-sky rotation="0 180 0" id="image-360" radius="10" src="#club360-toilet"></a-sky>
-           <a-entity position="-3 -3 -1 " rotation="90 90 0" template="src: #link" data-opacity="0.9" data-src="#premium360"  data-thumb="#direct4-thumb" link="from: #club-toilet-scene; to: #club-door-scene"></a-entity>
+           <a-sky rotation="0 290 0" id="image-360" radius="10" src="#club360-toilet"></a-sky>
+           <a-entity position="0.22 -3 2.71" rotation="90 290 0" template="src: #link" data-opacity="0.9" data-src="#premium360"  data-thumb="#direct-thumb" link="from: #club-toilet-scene; to: #club-door-scene"></a-entity>
 
        </a-entity>
 
        <a-entity visible="false" id="club-door-scene">
+            <a-sky rotation="0 205 0" id="image-360" radius="10" src="#club360-door"></a-sky>
+           
+           <a-entity position="-0.57 -3 -1.7" rotation="85 110 0" template="src: #link" data-opacity="0.9" data-src="#premium360"  data-thumb="#direct-thumb" link="from: #club-door-scene; to: #club-toilet-scene"></a-entity>
 
-           <a-sky rotation="0 180 0" id="image-360" radius="10" src="#club360-door"></a-sky>
-           <a-entity position="1 -3 -3.5" rotation="90 90 0" template="src: #link" data-opacity="0.9" data-src="#premium360"  data-thumb="#direct-thumb" link="from: #club-door-scene; to: #club-toilet-scene"></a-entity>
-
-            <a-entity position="3 -3 1" rotation="90 0 0" template="src: #link" data-opacity="0.9" data-src="#club-toilet"  data-thumb="#direct-thumb" link="from: #club-door-scene; to: #club-scene" ></a-entity>
+            <a-entity position="2.76 -3 -0.91" rotation="90 20 0" template="src: #link" data-opacity="0.9" data-src="#club-toilet"  data-thumb="#direct-thumb" link="from: #club-door-scene; to: #club-scene" ></a-entity>
        </a-entity>
 
    </a-scene>
