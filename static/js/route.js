@@ -10,12 +10,15 @@ AFRAME.registerComponent('route', {
     init: function() {
 
             var href = this.data.href;
-            var hash = this.data.hash;
             var el = this.el;
+
+
+            var hash = (location.hash === '#vrmode'? 'vrmode': null);
 
              el.addEventListener("click", function () {
 
                 location.assign( "/" + href + "#" + hash );
+
 
              });
 

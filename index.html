@@ -15,16 +15,34 @@
     <script src="https://npmcdn.com/aframe-layout-component@3.0.1"></script>
     <script src="https://npmcdn.com/aframe-template-component@3.1.1"></script>
     <script src="https://rawgit.com/oscarmarinmiro/aframe-video-controls/master/dist/aframe-video-controls.min.js"></script>
+    <script src="https://rawgit.com/protyze/aframe-always-fullscreen-component/master/dist/aframe-always-fullscreen-component.min.js"></script>
     <script src="static/js/set-image.js"></script>
     <script src="static/js/loader.js"></script>
     <script src="static/js/show-navigation.js"></script>
     <script src="static/js/arrow.js"></script>
+    <script src="static/js/auto.js"></script>
     <script src="static/js/route.js"></script>
     <script src="static/js/link.js"></script>
     <script src="static/js/refresh.js"></script>
     <script src="static/js/look-at.js"></script>
-</head>
-  </head>
+
+    <script>
+   (function () {
+       // switch to stereoscopic mode directly on page load, this needs to be after the a-scene loads.
+       var scene = document.querySelector('a-scene');
+
+       console.log(scene);
+       if (scene.hasLoaded) {
+           scene.enterVR();
+       } else {
+           scene.addEventListener('loaded', function () {
+               setTimeout(function () {
+                   scene.enterVR();
+               }, 1000);
+           });
+       };
+   })();
+</script>
 </head>
 
 <body id="main">
@@ -35,7 +53,7 @@
 
 </div>
 
-  <a-scene loader id="ancestor">
+  <a-scene loader id="ancestor" auto-init-vr>
       <a-assets>
         <!-- Image links. -->
         <img id="arrival-thumb" src="static/media/airport-thumb.png">
