@@ -1,4 +1,9 @@
+
+
+
+
 AFRAME.registerComponent('auto-init-vr', {
+
     init: function () {
 
         var scene = this;
@@ -27,3 +32,8 @@ AFRAME.registerComponent('auto-init-vr', {
 
     }
 });
+
+
+
+
+
