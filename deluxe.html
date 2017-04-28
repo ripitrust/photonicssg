@@ -20,6 +20,7 @@
     <script src="static/js/route.js"></script>
     <script src="static/js/link.js"></script>
     <script src="static/js/refresh.js"></script>
+    <script src="static/js/auto.js"></script>
     <script src="static/js/back.js"></script>
 </head>
  
@@ -30,7 +31,7 @@
    <img style="height: 50px; width: 50px; padding-top: 30%" src="/static/media/loader.gif"  id="loader"/>
 </div>
 
-  <a-scene loader id="ancestor">
+  <a-scene loader id="ancestor" auto-init-vr>
       <a-assets>
         <!-- Image links. -->
         <img id="direct-thumb" src="static/media/direct-thumb.png">

@@ -16,6 +16,7 @@
     <script src="https://rawgit.com/oscarmarinmiro/aframe-video-controls/master/dist/aframe-video-controls.min.js"></script>
     <script src="static/js/loader.js"></script>
     <script src="static/js/back.js"></script>
+    <script src="static/js/auto.js"></script>
     
 </head>
 
@@ -27,7 +28,7 @@
 
 </div>
 
-  <a-scene loader id="ancestor">
+  <a-scene loader id="ancestor" auto-init-vr>
       <a-assets>
         <!-- Image links. -->
         <img id="back-thumb" src="static/media/back-thumb.png">
