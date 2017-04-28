@@ -26,11 +26,10 @@
 </head>
 
 <body id="main">
-<div id="loader" style="text-align: center; padding-top:20%;">
+<div id="loader" style="text-align: center; width: 100%; height: 100%; background-color: black">
 
-    <img style="height: 30px; width: 30px" src="/static/media/loader.gif"  id="loader"/>
+   <img style="height: 50px; width: 50px; padding-top: 30%" src="/static/media/loader.gif"  id="loader"/>
 
-    <h2> Photonics Singapore 2017  </h2>
 </div>
 
   <a-scene loader id="ancestor">
@@ -40,6 +39,10 @@
         <img id="pool-thumb" src="static/media/pool-thumb.png">
         <img id="leisure" src="static/media/leisure360.jpg">
         <img id="back-thumb" src="static/media/back-thumb.png">
+
+        <img id="rhapsody-thumb" src="static/media/rhapsody-thumb.png">
+        <img id="fall-thumb" src="static/media/fall-thumb.png">
+        <img id="future-thumb" src="static/media/future-thumb.png">
 
         <audio id="click-sound" crossorigin="anonymous" src="static/media/click.wav"></audio>
         <!-- <video id="event-video" src="static/media/event2.mp4"></video> -->
@@ -76,14 +79,14 @@
 
         <a-sky rotation="0 -90 0" id="leisure-sky" radius="10" src="#leisure"></a-sky>
 
-        <a-entity position="0 -1.5 -4" template="src: #link" data-opacity="0.8" data-thumb="#back-thumb" back ></a-entity>
+        <a-entity position="0 -2.35 -3.3" template="src: #link" data-opacity="0.8" data-thumb="#back-thumb" back ></a-entity>
 
-        <a-entity  position="-1 -0.5 -4" template="src: #link" data-opacity="0.8" set-image="on: mouseenter; back: mouseleave; target: #leisure-sky; src: #leisure ; original: #stay" data-thumb="#rhapsody-thumb" route="href: rhapsody.html"></a-entity>
+        <a-entity  position="-1 -0.5 -4" template="src: #link" data-opacity="0.98" set-image="on: mouseenter; back: mouseleave; target: #leisure-sky; src: #leisure ; original: #stay" data-thumb="#rhapsody-thumb" route="href: rhapsody.html"></a-entity>
 
         <a-entity  position="0 -0.5 -4" set-image="on: mouseenter; back:mouseleave; target: #leisure-sky; src: #pool-corri; original: #stay"
-          route="href: fall.html" template="src: #link" data-opacity="0.8" data-thumb="#fall-thumb"></a-entity>
+          route="href: fall.html" template="src: #link" data-opacity="0.98" data-thumb="#fall-thumb"></a-entity>
 
-        <a-entity  position="1 -0.5 -4" template="src: #link" data-opacity="0.8" set-image="on: mouseenter; back: mouseleave; target: #leisure-sky; src: #room ; original: #stay" data-thumb="#future-thumb" route="href: future.html"></a-entity>
+        <a-entity  position="1 -0.5 -4" template="src: #link" data-opacity="0.98" set-image="on: mouseenter; back: mouseleave; target: #leisure-sky; src: #room ; original: #stay" data-thumb="#future-thumb" route="href: future.html"></a-entity>
 
     </a-entity>
 

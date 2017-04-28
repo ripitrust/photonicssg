@@ -23,11 +23,9 @@
  
 
 <body id="main">
-<div id="loader" style="text-align: center; padding-top:20%;">
+<div id="loader" style="text-align: center; width: 100%; height: 100%; background-color: black">
 
-   <img style="height: 40px; width: 40px" src="/static/media/loader.gif"  id="loader"/>
-
-   <h2> Photonics Singapore 2017  </h2>
+   <img style="height: 50px; width: 50px; padding-top: 30%" src="/static/media/loader.gif"  id="loader"/>
 
 </div>
 
@@ -40,15 +38,16 @@
         
         <img id="back-thumb" src="static/media/back-thumb.png">
         <img id="direct-thumb" src="static/media/direct-thumb.png">
-        <img id="direct2-thumb" src="static/media/direct2-thumb.png">
-        <img id="direct3-thumb" src="static/media/direct3-thumb.png">
-        <img id="direct4-thumb" src="static/media/direct4-thumb.png">
-
+        <img id="flower-thumb" src="static/media/f-thumb.png">
+        <img id="hall-thumb" src="static/media/hall-thumb.png">
+       
+      
         <img id="fd360" src="static/media/flowerdome360.jpg">
         <img id="fd360-1" src="static/media/flowerdome360-1.jpg">
         <img id="fd360-2" src="static/media/flowerdome360-2.jpg">
-        <img id="fd360-4" src="static/media/flowerdome360-4.jpg">
-        <img id="fd360-5" src="static/media/flowerdome360-out.jpg">
+        <img id="fd360-3" src="static/media/flowerdome360-3.jpg">
+        <img id="fd360-4" src="static/media/flowerdome360-out.jpg">
+        <img id="fd360-hall" src="static/media/flowerhall360.jpg">
 
 
         <img id="room" src="static/media/room360.jpg">
@@ -86,19 +85,21 @@
 
     <a-entity id="fd-scene" visible="true" class="scene">
 
-        <a-sky rotation="0 90 0" id="gbb-sky" radius="10" src="#fd360"></a-sky>
+        <a-sky rotation="0 -80 -5" id="gbb-sky" radius="10" src="#fd360"></a-sky>
 
-        <a-entity position="0 -1.5 -4" template="src: #link" data-opacity="0.9" data-thumb="#back-thumb" back ></a-entity>
+        <a-entity position="0 -2.35 -3.3" template="src: #link" data-opacity="0.9" data-thumb="#back-thumb" back ></a-entity>
+        
+        <a-entity position="1 -2.35 -3.3" scale="0.8 0.8 0.8" template="src: #link" data-opacity="0.8" data-thumb="#hall-thumb" link="from: #fd-scene; to: #fd-hall" ></a-entity>
 
-        <a-entity  position="-2 -0.5 -4" template="src: #link" data-opacity="0.8" data-thumb="#flower1-thumb"
+        <a-entity  position="-1.5 -3.72 -5.06"  template="src: #link" data-opacity="0.8" data-thumb="#flower-thumb"
         link="from: #fd-scene; to: #fd-scene1"
          ></a-entity>
-        <a-entity  position="-1 -0.5 -4" template="src: #link" data-opacity="0.8" data-thumb="#flower2-thumb"
+        <a-entity  position="-5.74 0 -6.5" template="src: #link" data-opacity="0.8" data-thumb="#flower-thumb"
         link="from: #fd-scene; to: #fd-scene2" ></a-entity>
-        <a-entity  position="0 -0.5 -4" template="src: #link" data-opacity="0.8"  data-thumb="#flower4-thumb"
-        link="from: #fd-scene; to: #fd-scene4" ></a-entity>
-        <a-entity  position="1 -0.5 -4" template="src: #link" data-opacity="0.8"  data-thumb="#flower5-thumb"
-        link="from: #fd-scene; to: #fd-scene5"></a-entity>
+        <a-entity  position="4.38 -1.29 -5.76" template="src: #link" data-opacity="0.8"  data-thumb="#flower-thumb"
+        link="from: #fd-scene; to: #fd-scene3" ></a-entity>
+        <a-entity  position="8.13 -1.69 -3.69" rotation="0 -40 0" template="src: #link" data-opacity="0.8"  data-thumb="#flower-thumb"
+        link="from: #fd-scene; to: #fd-scene4"></a-entity>
 
     </a-entity>
 
@@ -106,7 +107,7 @@
 
         <a-sky rotation="0 90 0" id="gbb-sky" radius="10" src="#fd360-1"></a-sky>
 
-        <a-entity  position="-2 0 -4" template="src: #link" data-thumb="#back-thumb" data-opacity="0.8" link="from: #fd-scene1; to: #fd-scene" ></a-entity>
+        <a-entity position="0 -2.35 -3.3" template="src: #link" data-opacity="0.9" data-thumb="#back-thumb" link="from: #fd-scene1; to: #fd-scene" ></a-entity>
 
     </a-entity>
 
@@ -114,25 +115,34 @@
 
         <a-sky rotation="0 90 0" id="gbb-sky" radius="10" src="#fd360-2"></a-sky>
 
-        <a-entity  position="-1 0 -4" template="src: #link" data-thumb="#back-thumb" data-opacity="0.8" link="from: #fd-scene2; to :#fd-scene" ></a-entity>
+        <a-entity position="0 -2.35 -3.3" template="src: #link" data-opacity="0.9" data-thumb="#back-thumb" link="from: #fd-scene2; to: #fd-scene" ></a-entity>
 
     </a-entity>
     
+
+    <a-entity id="fd-scene3" visible="false" class="scene">
+
+        <a-sky rotation="0 90 0" id="gbb-sky" radius="10" src="#fd360-3"></a-sky>
+
+        <a-entity position="0 -2.35 -3.3" template="src: #link" data-opacity="0.9" data-thumb="#back-thumb" link="from: #fd-scene3; to: #fd-scene" ></a-entity>
+
+    </a-entity>
+
 
     <a-entity id="fd-scene4" visible="false" class="scene">
 
         <a-sky rotation="0 90 0" id="gbb-sky" radius="10" src="#fd360-4"></a-sky>
 
-        <a-entity  position="0 0 -4" template="src: #link" data-thumb="#back-thumb" data-opacity="0.8" link="from: #fd-scene4; to:#fd-scene" ></a-entity>
+       <a-entity position="0 -2.35 -3.3" template="src: #link" data-opacity="0.9" data-thumb="#back-thumb" link="from: #fd-scene4; to: #fd-scene" ></a-entity>
 
     </a-entity>
 
 
-    <a-entity id="fd-scene5" visible="false" class="scene">
+    <a-entity id="fd-hall" visible="false" class="scene">
 
-        <a-sky rotation="0 90 0" id="gbb-sky" radius="10" src="#fd360-5"></a-sky>
+        <a-sky rotation="0 0 0" id="gbb-sky" radius="10" src="#fd360-hall"></a-sky>
 
-        <a-entity  position="1 0 -4" template="src: #link" data-thumb="#back-thumb" data-opacity="0.8" link="from: #fd-scene5; to:#fd-scene" ></a-entity>
+       <a-entity position="0 -2.35 -3.3" template="src: #link" data-opacity="0.9" data-thumb="#back-thumb" link="from: #fd-hall; to: #fd-scene" ></a-entity>
 
     </a-entity>
 

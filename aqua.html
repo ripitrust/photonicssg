@@ -22,11 +22,9 @@
  
 
 <body id="main">
-<div id="loader" style="text-align: center; padding-top:20%;">
+<div id="loader" style="text-align: center; width: 100%; height: 100%; background-color: black">
 
-    <img style="height: 40px; width: 40px" src="/static/media/loader.gif"  id="loader"/>
-
-   <h2> Photonics Singapore 2017  </h2>
+   <img style="height: 50px; width: 50px; padding-top: 30%" src="/static/media/loader.gif"  id="loader"/>
 
 </div>
 
@@ -39,9 +37,10 @@
         
         <img id="back-thumb" src="static/media/back-thumb.png">
         <img id="direct-thumb" src="static/media/direct-thumb.png">
-        <img id="direct2-thumb" src="static/media/direct2-thumb.png">
-        <img id="direct3-thumb" src="static/media/direct3-thumb.png">
-        <img id="direct4-thumb" src="static/media/direct4-thumb.png">
+        <img id="aqua-pillar-thumb" src="static/media/aqua-pillar-thumb.png">
+        <img id="aqua-door-thumb" src="static/media/aqua-door-thumb.png">
+        <img id="aqua-jelly-thumb" src="static/media/aqua-jelly-thumb.png">
+        <img id="aqua-gallery-thumb" src="static/media/aqua-gallery-thumb.png">
 
         <img id="aqua" src="static/media/aquarium360.jpg">
         <img id="aqua-door" src="static/media/aquarium360-door.jpg">
@@ -91,17 +90,20 @@
 
         <a-sky rotation="0 -90 0" id="aqua-sky" radius="10" src="#aqua"></a-sky>
 
-        <a-entity position="0 -1.5 -4" template="src: #link" data-opacity="0.8" data-thumb="#back-thumb" back></a-entity>  
-        
-        <a-entity  position="-2 -0.5 -4" template="src: #link" data-opacity="0.8" data-thumb="#aqua-door-thumb"
-        link="from: #aqua-scene; to: #aqua-door-scene"></a-entity>
+        <a-entity position="0 -2.35 -3.3" template="src: #link" data-opacity="0.8" data-thumb="#back-thumb" back></a-entity>  
 
-        <a-entity  position="-1 -0.5 -4" template="src: #link" data-opacity="0.8" data-thumb="#aqua-jelly-thumb"
+        <a-entity  position="0.7 -2.35 -3.3" scale="0.7 0.7 0.7" template="src: #link" data-opacity="0.8"  data-thumb="#aqua-gallery-thumb"
+        link="from: #aqua-scene; to: #aqua-gallery-scene" ></a-entity>
+      
+
+        <a-entity  position="-1 -0.5 -4" template="src: #link" data-opacity="0.85" data-thumb="#aqua-jelly-thumb"
         link="from: #aqua-scene; to: #aqua-jelly-scene" ></a-entity>
 
-        <a-entity  position="0 -0.5 -4" template="src: #link" data-opacity="0.8"  data-thumb="#aqua-gallery-thumb"
-        link="from: #aqua-scene; to: #aqua-gallery-scene" ></a-entity>
-        <a-entity  position="1 -0.5 -4" template="src: #link" data-opacity="0.8"  data-thumb="#aquaa-pillar-thumb"
+        <a-entity  position="0 -0.5 -4" template="src: #link" data-opacity="0.85" data-thumb="#aqua-door-thumb"
+        link="from: #aqua-scene; to: #aqua-door-scene"></a-entity>
+
+        
+        <a-entity  position="1 -0.5 -4" template="src: #link" data-opacity="0.85"  data-thumb="#aqua-pillar-thumb"
         link="from: #aqua-scene; to: #aqua-pillar-scene" ></a-entity>
 
     </a-entity>
@@ -110,7 +112,7 @@
 
         <a-sky rotation="0 90 0" id="door-sky" radius="10" src="#aqua-door"></a-sky>
 
-       <a-entity  position="-2 0 -4" template="src: #link" data-thumb="#back-thumb" data-opacity="0.8" link="from: #aqua-door-scene; to: #aqua-scene" ></a-entity>
+       <a-entity  position="0 -2.35 -3.3" template="src: #link" data-thumb="#back-thumb" data-opacity="0.8" link="from: #aqua-door-scene; to: #aqua-scene" ></a-entity>
 
     </a-entity>
 
@@ -120,10 +122,10 @@
 
            <a-entity  position="2 -3 -5" rotation="90 0 0" template="src: #link" data-opacity="0.8"  data-thumb="#direct-thumb" link="from: #aqua-jelly-scene; to: #aqua-jelly3-scene"></a-entity>
 
-        <a-entity  position="-4 -3 -5" rotation="90 0 0"
-          link="from: #aqua-jelly-scene; to: #aqua-jelly2-scene" template="src: #link" data-opacity="0.8" data-thumb="#direct2-thumb"></a-entity>
+        <a-entity  position="-4 -3 -5" rotation="90 0 180"
+          link="from: #aqua-jelly-scene; to: #aqua-jelly2-scene" template="src: #link" data-opacity="0.8" data-thumb="#direct-thumb"></a-entity>
 
-        <a-entity  position="-1 -0.5 -4" template="src: #link" data-thumb="#back-thumb" data-opacity="0.8" link="from: #aqua-jelly-scene; to: #aqua-scene" ></a-entity>
+        <a-entity  position="0 -2.35 -3.3" template="src: #link" data-thumb="#back-thumb" data-opacity="0.8" link="from: #aqua-jelly-scene; to: #aqua-scene" ></a-entity>
 
     </a-entity>
 
@@ -142,48 +144,25 @@
 
         <a-sky rotation="0 90 0" id="jelly-sky" radius="10" src="#aqua-jelly3"></a-sky>
 
-        <a-entity  position="-4 -3 3" rotation="90 0 0"
-          link="from: #aqua-jelly3-scene; to: #aqua-jelly-scene" template="src: #link" data-opacity="0.8" data-thumb="#direct3-thumb"></a-entity>
+        <a-entity  position="-5 -3 3" rotation="90 0 90"
+          link="from: #aqua-jelly3-scene; to: #aqua-jelly-scene" template="src: #link" data-opacity="0.8" data-thumb="#direct-thumb"></a-entity>
 
     </a-entity>
     
     <a-entity id="aqua-gallery-scene" visible="false" class="scene">
 
-        <a-sky rotation="0 90 0" id="gbb-sky" radius="10" src="#aqua-gallery"></a-sky>
+        <a-sky rotation="1 -90 5" id="gbb-sky" radius="10" src="#aqua-gallery"></a-sky>
 
-        <a-entity  position="-4 -3 3" rotation="90 0 0"
-          link="from: #aqua-gallery-scene; to: #aqua-gallery1-scene" template="src: #link" data-opacity="0.8" data-thumb="#direct4-thumb"></a-entity>
-
-        <a-entity  position="0 -0.5 -4" template="src: #link" data-thumb="#back-thumb" data-opacity="0.8" link="from: #aqua-gallery-scene; to:#aqua-scene" ></a-entity>
+        <a-entity  position="0 -2.35 -3.3" template="src: #link" data-thumb="#back-thumb" data-opacity="0.8" link="from: #aqua-gallery-scene; to:#aqua-scene" ></a-entity>
 
     </a-entity>
 
-    <a-entity id="aqua-gallery1-scene" visible="false" class="scene">
-
-        <a-sky rotation="0 90 0" id="aqua-sky" radius="10" src="#aqua-gallery1"></a-sky>
-
-        <a-entity  position="-4 -3 -3" rotation="90 0 0"
-          link="from: #aqua-gallery1-scene; to: #aqua-gallery-scene" template="src: #link" data-opacity="0.8" data-thumb="#direct3-thumb"></a-entity>
-
-        <a-entity  position="4 -3 -3" rotation="90 0 0"
-          link="from: #aqua-gallery1-scene; to: #aqua-gallery2-scene" template="src: #link" data-opacity="0.8" data-thumb="#direct4-thumb"></a-entity>
-
-    </a-entity>
-
-    <a-entity id="aqua-gallery2-scene" visible="false" class="scene">
-
-        <a-sky rotation="0 90 0" id="aqua-sky" radius="10" src="#aqua-gallery2"></a-sky>
-
-        <a-entity  position="0 -3 -3" rotation="90 0 0"
-          link="from: #aqua-gallery2-scene; to: #aqua-gallery1-scene" template="src: #link" data-opacity="0.8" data-thumb="#direct3-thumb"></a-entity>
-
-    </a-entity>
 
     <a-entity id="aqua-pillar-scene" visible="false" class="scene">
 
-        <a-sky rotation="0 90 0" id="gbb-sky" radius="10" src="#aqua-pillar2"></a-sky>
+        <a-sky rotation="0 110 0" id="gbb-sky" radius="10" src="#aqua-pillar2"></a-sky>
 
-        <a-entity  position="1 0 -4" template="src: #link" data-thumb="#back-thumb" data-opacity="0.8" link="from: #aqua-pillar-scene; to:#aqua-scene" ></a-entity>
+        <a-entity  position="0 -2.35 -3.3" template="src: #link" data-thumb="#back-thumb" data-opacity="0.8" link="from: #aqua-pillar-scene; to:#aqua-scene" ></a-entity>
 
     </a-entity>
 

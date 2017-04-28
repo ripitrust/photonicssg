@@ -24,11 +24,10 @@
 </head>
 
 <body id="main">
-<div id="loader" style="text-align: center; padding-top:20%;">
+<div id="loader" style="text-align: center; width: 100%; height: 100%; background-color: black">
 
-    <img style="height: 40px; width: 40px" src="/static/media/loader.gif"  id="loader"/>
+   <img style="height: 50px; width: 50px; padding-top: 30%" src="/static/media/loader.gif"  id="loader"/>
 
-     <h2> Photonics Singapore 2017  </h2>
 </div>
 
   <a-scene loader id="ancestor">
@@ -47,9 +46,6 @@
 
         <img id="back-thumb" src="static/media/back-thumb.png">
         <img id="direct-thumb" src="static/media/direct-thumb.png">
-        <img id="direct2-thumb" src="static/media/direct2-thumb.png">
-        <img id="direct3-thumb" src="static/media/direct3-thumb.png">
-        <img id="direct4-thumb" src="static/media/direct4-thumb.png">
 
         <img id="pool-front" src="static/media/pool-front.jpg">
         <img id="pool-back" src="static/media/pool-back.jpg">
@@ -91,23 +87,23 @@
 
          <a-entity visible="true" id="pool-scene" >
 
-          <a-sky rotation="0 90 0" id="image-360" radius="10" src="#pool-corri"></a-sky>
+          <a-sky rotation="-2 90 0" id="image-360" radius="10" src="#pool-corri"></a-sky>
 
-          <a-entity position="0 -1.5 -4" template="src: #link" data-opacity="0.8" data-thumb="#back-thumb" back ></a-entity>
+          <a-entity position="0 -2.35 -3.3" template="src: #link" data-opacity="0.8" data-thumb="#back-thumb" back ></a-entity>
 
-          <a-entity position="0 -2 -3" rotation="90 0 0" template="src: #link" data-opacity="0.9" data-thumb="#direct3-thumb" link="from :#pool-scene; to: #pool-front-scene" ></a-entity>
+          <a-entity position="0 -3.5 -6.83" rotation="90 -90 180" scale="1.5 1.5 1.5" template="src: #link" data-opacity="0.9" data-thumb="#direct-thumb" link="from :#pool-scene; to: #pool-front-scene" ></a-entity>
 
           <a-entity position="3 -2 0" rotation="90 0 0" template="src: #link" data-opacity="0.9" data-thumb="#direct-thumb" link="from :#pool-scene; to: #pool-panel-scene" ></a-entity>
 
-           <a-entity position="0 -2 3" rotation="90 0 0" template="src: #link" data-opacity="0.9" data-src="#room"  data-thumb="#direct4-thumb" link="from: #pool-scene; to: #pool-back-scene" ></a-entity>
+           <a-entity position="-0.13 -1.82 2.8" rotation="90 0 90" template="src: #link" data-opacity="0.9" data-src="#room"  data-thumb="#direct-thumb" link="from: #pool-scene; to: #pool-back-scene" ></a-entity>
           
        </a-entity>
 
         <a-entity visible="false" id="pool-front-scene" >
 
-          <a-sky rotation="0 -90 0" id="image-360" radius="10" src="#pool-front"></a-sky>
+          <a-sky rotation="0 -50 7" id="image-360" radius="10" src="#pool-front"></a-sky>
 
-           <a-entity position="0 -2 3" rotation="90 0 0" template="src: #link" data-opacity="0.9" data-src="#room"  data-thumb="#direct4-thumb" link="from: #pool-front-scene; to: #pool-scene" ></a-entity>
+           <a-entity position="3.1 -1.94 3.26" rotation="20 50 95" template="src: #link" data-opacity="0.9" data-src="#room"  data-thumb="#direct-thumb" link="from: #pool-front-scene; to: #pool-scene" ></a-entity>
 
        </a-entity>
 
@@ -115,9 +111,9 @@
 
         <a-entity visible="false" id="pool-back-scene" >
 
-          <a-sky rotation="0 -90 0" id="image-360" radius="10" src="#pool-back"></a-sky>
+          <a-sky rotation="0 -180 0" id="image-360" radius="10" src="#pool-back"></a-sky>
 
-          <a-entity position="0 -2 -3" rotation="90 0 0" template="src: #link" data-opacity="0.9" data-thumb="#direct3-thumb" link="from :#pool-back-scene; to: #pool-scene" ></a-entity>
+          <a-entity position="4.7 -2.41 0.27" rotation="90 90 90" template="src: #link" data-opacity="0.9" data-thumb="#direct-thumb" link="from :#pool-back-scene; to: #pool-scene" ></a-entity>
 
        </a-entity>
 
@@ -125,7 +121,7 @@
 
           <a-sky rotation="0 -90 0" id="image-360" radius="10" src="#pool-panel"></a-sky>
 
-          <a-entity position="3 -2 1" rotation="90 0 0" template="src: #link" data-opacity="0.9" data-thumb="#direct-thumb" link="from :#pool-panel-scene; to: #pool-scene" ></a-entity>
+          <a-entity position="3 -2 1" rotation="90 90 90" template="src: #link" data-opacity="0.9" data-thumb="#direct-thumb" link="from :#pool-panel-scene; to: #pool-scene" ></a-entity>
 
        </a-entity>
 

@@ -21,17 +21,16 @@
 
 
 <body id="main">
-<div id="loader" style="text-align: center; padding-top:20%;">
+<div id="loader" style="text-align: center; width: 100%; height: 100%; background-color: black">
 
-      <img style="height: 40px; width: 40px" src="/static/media/loader.gif"  id="loader"/>
-
-     <h2> Photonics Singapore 2017  </h2>
+   <img style="height: 50px; width: 50px; padding-top: 30%" src="/static/media/loader.gif"  id="loader"/>
 
 </div>
 
   <a-scene loader id="ancestor">
       <a-assets>
         <!-- Image links. -->
+        <img id="back-thumb" src="static/media/back-thumb.png">
        
         <video autoplay="false" id="supertree360" src="static/media/supertree360.mp4"></video>
         <!-- Image link template to be reused. -->
@@ -50,7 +49,7 @@
     </a-assets>
 
     <!-- Camera + cursor.  -->
-      <a-entity camera position="0 0 0" look-controls>
+      <a-entity camera position="0 -1.35 -3.3" look-controls>
 
         <a-cursor id="cursor"
           fuse-timeout="2000"
@@ -65,7 +64,7 @@
       </a-entity>
       <a-videosphere src="#supertree360" rotation="0 180 0"></a-videosphere>
 
-      <a-entity position="0 -1.5 -4" template="src: #link" data-opacity="0.8" data-thumb="#back-thumb" back ></a-entity>
+      <a-entity position="0 -2.35 -3.3" template="src: #link" data-opacity="0.8" data-thumb="#back-thumb" back ></a-entity>
       <a-entity video-controls="src:#supertree360"></a-entity>
 
    </a-scene>

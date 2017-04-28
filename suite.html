@@ -79,42 +79,45 @@
        <!-- SUITE ROOM  -->
       <a-entity visible="true" id="suite-scene" >
 
-      <a-sky rotation="-2 90 3" id="image-360" radius="10" src="#suite360"></a-sky>
+      <a-sky rotation="-2 92 3" id="image-360" radius="10" src="#suite360"></a-sky>
       
        <a-entity position="0 -2.35 -3.3" template="src: #link" data-opacity="0.8" data-thumb="#back-thumb" back></a-entity>  
 
-         <a-entity position="1.41 -0.88 0.25" rotation= "-10 -5 0" template="src: #link" data-opacity="0.9" data-src="#suite360-right"  data-thumb="#direct-thumb" link="from: #suite-scene; to: #suite-right-scene" ></a-entity>
+         <a-entity position="-4 -0.6 -4" rotation= "0 0 180" template="src: #link" data-opacity="0.9" data-src="#suite360-right"  data-thumb="#direct-thumb" link="from: #suite-scene; to: #suite-right-scene" ></a-entity>
 
-         <a-entity position="0 0 0" template="src: #link" data-opacity="0.9" data-src="#suite360-left"  data-thumb="#direct-thumb" link="from: #suite-scene; to: #suite-left-scene"  ></a-entity>
+         <a-entity position="4 -0.6 -4"  template="src: #link" data-opacity="0.9" data-src="#suite360-left"  data-thumb="#direct-thumb" link="from: #suite-scene; to: #suite-left-scene"  ></a-entity>
 
-         <a-entity position="4 -0.6 -4" template="src: #link" data-opacity="0.9" data-src="#suite360-room"  data-thumb="#direct4-thumb" link="from: #suite-scene; to: #suite-room-scene"></a-entity>
+         <a-entity position="-4.27 -2.94 2.07" rotation= "100 90 180" template="src: #link" data-opacity="0.9" data-src="#suite360-room"  data-thumb="#direct-thumb" link="from: #suite-scene; to: #suite-room-scene"></a-entity>
           
         </a-entity>
 
+
         <a-entity visible="false" id="suite-right-scene" >
 
-         <a-sky rotation="0 90 -15" id="image-360" radius="10" src="#suite360-right"></a-sky>
+         <a-sky rotation="0 0 0" id="image-360" radius="10" src="#suite360-right"></a-sky>
 
-         <a-entity position="-1 -2.5 -4" template="src: #link" data-opacity="0.9" data-src="#suite360-toilet"  data-thumb="#direct2-thumb"  link="from: #suite-right-scene; to: #suite-toilet-scene"  ></a-entity>
+         <a-entity position="1.7 -3 5.14" rotation= "90 90 90" template="src: #link" data-opacity="0.9" data-src="#suite360-toilet"  data-thumb="#direct-thumb"  link="from: #suite-right-scene; to: #suite-toilet-scene"  ></a-entity>
 
-         <a-entity position="-3 -2 -1.5" template="src: #link" data-opacity="0.9" data-src="#suite360"  data-thumb="#direct2-thumb"  link="from: #suite-right-scene; to: #suite-scene"  ></a-entity>
+         <a-entity position="0 -2.6 -4.36" rotation= "92 -90 -180" template="src: #link" data-opacity="0.9" data-src="#suite360"  data-thumb="#direct-thumb"  link="from: #suite-right-scene; to: #suite-scene"  ></a-entity>
 
        </a-entity>
 
 
        <a-entity visible="false" id="suite-toilet-scene" >
 
-        <a-sky rotation="0 90 -15" id="image-360" radius="10" src="#suite360-toilet"></a-sky>
+        <a-sky rotation="-2 104 5" id="image-360" radius="10" src="#suite360-toilet"></a-sky>
 
-        <a-entity position="0 -1 -2" template="src: #link" data-opacity="0.9" data-thumb="#direct2-thumb"  link="from: #suite-toilet-scene; to: #suite-scene"></a-entity>
+        <a-entity position="-1.38 -2.81 -5.25" rotation= "100 50 5" template="src: #link" data-opacity="0.9" data-thumb="#direct-thumb"  link="from: #suite-toilet-scene; to: #suite-scene"></a-entity>
+
+        <a-entity position="3 -2.8 -2.4" rotation= "90 90 85" template="src: #link" data-opacity="0.9" data-src="#suite360-room"  data-thumb="#direct-thumb" link="from: #suite-toilet-scene; to: #suite-roomright-scene"></a-entity>
 
        </a-entity>
 
        <a-entity visible="false" id="suite-left-scene" > 
 
-        <a-sky rotation="0 90 -15" id="image-360" radius="10" src="#suite360-left"></a-sky>
+        <a-sky rotation="-2 -145 -10" id="image-360" radius="10" src="#suite360-left"></a-sky>
 
-        <a-entity position="3 -3 -1" template="src: #link" data-opacity="0.9" data-src="#suite360"  data-thumb="#direct-thumb"  link="from: #suite-left-scene; to: #suite-scene"></a-entity>
+        <a-entity position="-2 -3 -3.4" rotation= "90 -42 180" template="src: #link" data-opacity="0.9" data-src="#suite360"  data-thumb="#direct-thumb"  link="from: #suite-left-scene; to: #suite-scene"></a-entity>
 
        </a-entity>
 
@@ -122,30 +125,32 @@
 
        <a-entity visible="false" id="suite-room-scene" >
 
-          <a-sky rotation="0 90 -15" id="image-360" radius="10" src="#suite360-room"></a-sky>
+          <a-sky rotation="0 35 0" id="image-360" radius="10" src="#suite360-room"></a-sky>
 
-           <a-entity position="0 -0.5 -4" template="src: #link" data-opacity="0.6" data-src="#suite360"  data-thumb="#back-thumb" link="from: #suite-room-scene; to: #suite-scene" ></a-entity>
+           <a-entity position="-2.84 -3.74 -6.23" rotation="90 90 50" template="src: #link" data-opacity="0.6" data-src="#suite360"  data-thumb="#direct-thumb" link="from: #suite-room-scene; to: #suite-scene" ></a-entity>
 
-           <a-entity position="3 -1 1.5" rotation="90 0 0" template="src: #link" data-opacity="0.9" data-src="#suite360-roomright"  data-thumb="#direct-thumb" link="from: #suite-room-scene; to: #suite-roomright-scene" ></a-entity>
+           <a-entity position="-3.91 -2.89 -4.64" rotation="90 90 -40" template="src: #link" data-opacity="0.9" data-src="#suite360-roomright"  data-thumb="#direct-thumb" link="from: #suite-room-scene; to: #suite-roomright-scene" ></a-entity>
 
-           <a-entity position="-3 -1 1.5" rotation="90 0 0" template="src: #link" data-opacity="0.9" data-src="#suite360-roomleft"  data-thumb="#direct2-thumb" link="from: #suite-room-scene; to: #suite-roomleft-scene"  ></a-entity>
+           <a-entity position="2.41 -3.95 4.4" rotation="90 90 125" template="src: #link" data-opacity="0.9" data-src="#suite360-roomleft"  data-thumb="#direct-thumb" link="from: #suite-room-scene; to: #suite-roomleft-scene"  ></a-entity>
 
        </a-entity>
 
 
        <a-entity visible="false" id="suite-roomright-scene" >
 
-          <a-sky rotation="0 90 -15" id="image-360" radius="10" src="#suite360-roomright"></a-sky>
+          <a-sky rotation="0 213 20" id="image-360" radius="10" src="#suite360-roomright"></a-sky>
 
-           <a-entity position="4 -2 -5" template="src: #link" data-opacity="0.9" data-src="#suite360-room"  data-thumb="#direct2-thumb" link="from: #suite-roomright-scene; to: #suite-room-scene" ></a-entity>
+           <a-entity position="1.16 -3.78 3.47" rotation="90 90 150" template="src: #link" data-opacity="0.9" data-src="#suite360-room"  data-thumb="#direct-thumb" link="from: #suite-roomright-scene; to: #suite-room-scene" ></a-entity>
+
+           <a-entity position="-2.84 -3.57 -2.22" rotation="90 90 -30" template="src: #link" data-opacity="0.9" data-src="#suite360-room"  data-thumb="#direct-thumb" link="from: #suite-roomright-scene; to: #suite-toilet-scene" ></a-entity>
 
        </a-entity>
 
 
        <a-entity visible="false" id="suite-roomleft-scene" >
 
-          <a-sky rotation="0 90 -15" id="image-360" radius="10" src="#suite360-roomleft"></a-sky>
-           <a-entity position="-3 -1 -1.5" template="src: #link" data-opacity="0.9" data-src="#suite360-room"  data-thumb="#direct2-thumb" link="from: #suite-roomleft-scene; to: #suite-room-scene"></a-entity>
+          <a-sky rotation="0 150 0" id="image-360" radius="10" src="#suite360-roomleft"></a-sky>
+           <a-entity position="-2.62 -3.65 3.12" rotation="90 90 -150" template="src: #link" data-opacity="0.9" data-src="#suite360-room"  data-thumb="#direct-thumb" link="from: #suite-roomleft-scene; to: #suite-room-scene"></a-entity>
 
        </a-entity>
 

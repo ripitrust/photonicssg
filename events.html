@@ -25,25 +25,25 @@
  
 
 <body id="main">
-<div id="loader" style="text-align: center; padding-top:20%;">
+<div id="loader" style="text-align: center; width: 100%; height: 100%; background-color: black">
 
-    <img style="height: 30px; width: 30px" src="/static/media/loader.gif"  id="loader"/>
-
-    <h2> Photonics Singapore 2017  </h2>
+   <img style="height: 50px; width: 50px; padding-top: 30%" src="/static/media/loader.gif"  id="loader"/>
 
 </div>
 
   <a-scene loader id="ancestor">
       <a-assets>
         <!-- Image links. -->
-        <img id="hotel-thumb" src="static/media/ballroom-thumb.png">
-        <img id="pool-thumb" src="static/media/gbb-thumb.png">
-        <img id="club-thumb" src="static/media/aqua-thumb.png">
+        <img id="ballroom-thumb" src="static/media/ballroom-thumb.png">
+        <img id="gbb-thumb" src="static/media/gbb-thumb.png">
+        <img id="aqua-thumb" src="static/media/aqua-thumb.png">
         <img id="events360" src="static/media/events360.jpg">
 
         <img id="ballroom360" src="static/media/ballroom360.jpg">
         <img id="gbb360" src="static/media/flowerdome360.jpg">
         <img id="aqua360" src="static/media/aquarium360.jpg">
+
+        <img id="back-thumb" src="static/media/back-thumb.png">
 
         <audio id="click-sound" crossorigin="anonymous" src="static/media/click.wav"></audio>
         <!-- <video id="event-video" src="static/media/event2.mp4"></video> -->
@@ -78,13 +78,15 @@
 
     <a-entity id="events-scene" visible="true" class="scene">
 
-        <a-sky rotation="0 90 0" id="events-sky" radius="10" src="#events360"></a-sky>
+        <a-sky rotation="0 60 0" id="events-sky" radius="10" src="#events360"></a-sky>
 
-        <a-entity  position="-1 -0.5 -4" template="src: #link" data-opacity="0.8" set-image="on: mouseenter; back: mouseleave; target: #events-sky; src: #ballroom360 ; original: #events360" data-thumb="#ballroom-thumb" route="href: ballroom.html"></a-entity>
+        <a-entity position="0 -2.35 -3.3" template="src: #link" data-opacity="0.8" data-thumb="#back-thumb" back></a-entity> 
 
-        <a-entity  position="0 -0.5 -4" template="src: #link" data-opacity="0.8" set-image="on: mouseenter; back: mouseleave; target: #events-sky; src: #gbb360 ; original: #events360" data-thumb="#flower-thumb" route="href: gbb.html"></a-entity>
+        <a-entity  position="1 -0.5 -4" template="src: #link" data-opacity="0.8" set-image="on: mouseenter; back: mouseleave; target: #events-sky; src: #ballroom360 ; original: #events360" data-thumb="#ballroom-thumb" route="href: ballroom.html"></a-entity>
 
-        <a-entity  position="1 -0.5 -4" template="src: #link" data-opacity="0.8" set-image="on: mouseenter; back: mouseleave; target: #events-sky; src:#aqua360 ; original: #events360" data-thumb="#aqua-thumb" route="href: aqua.html"></a-entity>
+        <a-entity  position="1.75 -0.47 -3" template="src: #link" data-opacity="0.8" set-image="on: mouseenter; back: mouseleave; target: #events-sky; src: #gbb360 ; original: #events360" data-thumb="#gbb-thumb" route="href: gbb.html"></a-entity>
+
+        <a-entity  position="2.4 -0.5 -2.4" template="src: #link" data-opacity="0.8" set-image="on: mouseenter; back: mouseleave; target: #events-sky; src:#aqua360 ; original: #events360" data-thumb="#aqua-thumb" route="href: aqua.html"></a-entity>
 
     </a-entity>
 
