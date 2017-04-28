@@ -33,7 +33,7 @@
         <!-- Image links. -->
         <img id="back-thumb" src="static/media/back-thumb.png">
        
-        <video autoplay="false" id="wonderfull360" src="static/media/wonderfull360.mp4"></video>
+        <video autoplay loop crossorigin id="wonderfull360" src="static/media/wonderfull360.mp4"></video>
         <!-- Image link template to be reused. -->
 
         <script id="link" type="text/html">
@@ -50,7 +50,7 @@
     </a-assets>
 
     <!-- Camera + cursor.  -->
-      <a-entity camera position="0 -1.35 -3.3" look-controls>
+      <a-entity camera position="0 0 0" look-controls>
 
         <a-cursor id="cursor"
           fuse-timeout="2000"
