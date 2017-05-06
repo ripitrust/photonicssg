@@ -14,6 +14,7 @@
     <script src="https://npmcdn.com/aframe-template-component@3.1.1"></script>
     <script src="https://rawgit.com/oscarmarinmiro/aframe-video-controls/master/dist/aframe-video-controls.min.js"></script>
     <script src="static/js/loader.js"></script>
+    <script src="static/js/auto.js"></script>
     <script src="static/js/back.js"></script>
 
 </head>
@@ -27,12 +28,12 @@
 </div>
 
 
-  <a-scene loader id="ancestor">
+  <a-scene loader id="ancestor" auto-init-vr>
       <a-assets>
         <!-- Image links. -->
         <img id="back-thumb" src="static/media/back-thumb.png">
        
-        <video autoplay="false" id="wonderfull360" src="static/media/wonderfull360.mp4"></video>
+        <video autoplay loop crossorigin id="wonderfull360" src="static/media/wonderfull360.mp4"></video>
         <!-- Image link template to be reused. -->
 
         <script id="link" type="text/html">
@@ -49,7 +50,7 @@
     </a-assets>
 
     <!-- Camera + cursor.  -->
-      <a-entity camera position="0 -1.35 -3.3" look-controls>
+      <a-entity camera position="0 0 0" look-controls>
 
         <a-cursor id="cursor"
           fuse-timeout="2000"

@@ -15,6 +15,7 @@
     <script src="https://rawgit.com/oscarmarinmiro/aframe-video-controls/master/dist/aframe-video-controls.min.js"></script>
     <script src="static/js/loader.js"></script>
     <script src="static/js/back.js"></script>
+    <script src="static/js/auto.js"></script>
     
 </head>
 
@@ -26,12 +27,12 @@
 
 </div>
 
-  <a-scene loader id="ancestor">
+  <a-scene loader id="ancestor" auto-init-vr>
       <a-assets>
         <!-- Image links. -->
         <img id="back-thumb" src="static/media/back-thumb.png">
        
-        <video autoplay="false" id="supertree360" src="static/media/supertree360.mp4"></video>
+        <video autoplay loop crossorigin id="supertree360" src="static/media/supertree360.mp4"></video>
         <!-- Image link template to be reused. -->
 
         <script id="link" type="text/html">
@@ -48,7 +49,7 @@
     </a-assets>
 
     <!-- Camera + cursor.  -->
-      <a-entity camera position="0 -1.35 -3.3" look-controls>
+      <a-entity camera position="0 0 0" look-controls>
 
         <a-cursor id="cursor"
           fuse-timeout="2000"
@@ -64,7 +65,7 @@
       <a-videosphere src="#supertree360" rotation="0 180 0"></a-videosphere>
 
       <a-entity position="0 -2.35 -3.3" template="src: #link" data-opacity="0.8" data-thumb="#back-thumb" back ></a-entity>
-      <a-entity video-controls="src:#supertree360"></a-entity>
+      <a-entity position="0 0 3" video-controls="src:#supertree360"></a-entity>
 
    </a-scene>
 
