@@ -21,11 +21,6 @@ AFRAME.registerComponent('auto-init-vr', {
             },100);
 
 
-            var parent = document.getElementById("main");
-            var child = document.getElementById("back-home");
-            parent.removeChild(child);
-
-
         }
 
         })
